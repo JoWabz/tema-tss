@@ -160,6 +160,43 @@ Metoda calculeaza_risk_score
 Metoda genereaza_recomandare
 ![Metoda grafului de control a fluxului metoda genereaza_recomandare](diagrame/CFG_genereaza_recomandare.drawio.png)
 
+### 3.1 Complexitatea ciclomatica
+Se bazeaza pe formula lui McCabe, pentru a afla numarul minim de drumuri necesare pentru parcurgerea cel putin o data a programului:
+V(G)=e-n+1.
+Pentru graful 1:
+Avem: - numarul de muchii ale grafului, e = 13
+- numarul de noduri ale grafului, n = 11->V(G1) = 13-11+1 = 3
+Pentru graful 2:
+e = 9, n = 8 -> =9-8+2 = 3
+### 3.2 Statement coverage (acoperirea la nivel de instructiune)
+Pentru U1 - calculeaza_risk_score()
+Drum 1: 1,3,4,5,6,7,9,10,6,11
+Drum 2: 1,3,4,5,6,7,8,6,11
+Drum 3: 1,2,3,4,5,11
+Drum 4: 1,3,4,5,11
+
+Pentru U2 - genereaza_recomandare():
+Drum1: 1,2,3
+Drum2: 1,2,4,5
+Drum3: 1,2,4,6,7
+Drum4: 1,2,4,6,8,9
+
+### 3.3 Decision coverage (acoperirea la nivel de decizie)
+Fiecare decizie trebuie sa ia atat valoarea True cat si False
+Ex: 
+
+### 3.4 Condition coverage (acoperirea la nivel de conditie)
+Pentru acoperirea la nivel de conditie, la metoda calculeaza_risk_score se pot folosi aceleasi teste ca si la statement coverage. 
+Pentru U2 - genereaza_recomandare(): 
+N2: risk_score >= 9.0 OR sev == 'critical'
+N4: risk_score >= 7.0 OR sev == 'high'
+N5: risk_score >= 4.0 OR sev == 'medium'
+N7: risk_score < 4.00 OR sev == 'low'
+Testul care acopera N5 cand score nu e >=4 si sev nu e = 'medium' acopera N7.
+![Screenshot teste acoperire conditie](diagrame/test_acoperire_conditie_recomandare.png)
+
+Numarul total de teste efectuate este 64.
+![Screenshot teste trecute](diagrame/screenshot_passed_tests1.png)
 
 ## 5. Bibliografie
 [1] https://docs.pytest.org/en/stable/index.html, Data accesarii: 6 mai 2026

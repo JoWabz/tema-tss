@@ -306,4 +306,10 @@ class TestCircuiteIndependente:
      pass
 
 class MutantiRamasi:
-     pass
+     def test_ucide_mutant_breach(self):
+          scor = RiskScorer.calculeaza_risk_score(5.0, 'internal', 'medie', 'low', ['a'])
+          # raw = 5.5 + 0 = 5.5, fara penalizare
+          assert scor == round(min((5.5 / 31.5) * 10, 10.0), 2)   
+     def test_ucide_mutant_or_vs_and_critic(self):
+          rec = RiskScorer.genereaza_recomandare(9.5, 'low')
+          assert rec['prioritate'] == 1

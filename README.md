@@ -139,10 +139,10 @@ Nr. total cazuri posibile: 5 x 5 x 6 x 6 x 6 = 5400
 
 
 6. Cazuri de testare (selectie reprezentativa a combinatiilor):
-
+a se vedea part1 din tabele_proiect.pdf
 
 7. Date de test (Tabel cu o selectie a datelor finale):
-
+a se vedea part1 din tabele_proiect.pdf
 ## 2. Testare functionala - Metoda grafului cauza - efect
 
 Am aplicat aceasta metoda pentru U2, functia genereaza_recomandare().

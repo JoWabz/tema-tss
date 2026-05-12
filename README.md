@@ -57,7 +57,7 @@ G4 = N4 x Z3 x B4 x S4 X I3 = O2
 G5 = N3 x Z4 x B5 x S5 X I4 = O2
 G6 = N1 x Z5 x B6 x S6 X I5 = O2
 G7 = N3 x Z2 x B3 x S4 x I3 = O2
-
+Pentru detalii a se vedea part1 din tabele_proiect.pdf
 
 ### 1.2 Analiza valorilor de frontiera (BVA)
 La analiza valorilor de  frontiera, am testat cvss_score si risk_score, deoarece au valori numerice. La cvss_score, avand valori intre 0.00 si 10.00, avem valorile: -0.01, 0,00, 0.01, 10.0, 10.01

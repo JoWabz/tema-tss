@@ -149,12 +149,12 @@ Am aplicat aceasta metoda pentru U2, functia genereaza_recomandare().
 Avem urmatoarele cauze: C1 - risk_score >= 9; C2 - severitate = 'critical'; C3 - risk_score >= 7.00; C4 - severitate = 'high'; C5 - risk_score >= 4.00; C6 - severitate = 'medium'; C7 - risk_score < 4.00; C8 - severitate = 'low'
 Efecte: E1 - prioritate 1; E2 - prioritate 2; E3 - prioritate 3; E4 - prioritate 4
 
-![Metoda grafului cauza-efect](Graful_cauza_efect.drawio.png)
+![Metoda grafului cauza-efect](diagrame/Graful_cauza_efect.drawio.png)
 
 ## 3. Testarea structurala - Metoda grafului de control al fluxului (CFG)
 
-![Metoda grafului de control a fluxului metoda calculeaza_risk_score](CFG_risk_score.drawio)
-![Metoda grafului de control a fluxului metoda genereaza_recomandare](CFG_genereaza_recomandare.drawio)
+![Metoda grafului de control a fluxului metoda calculeaza_risk_score](diagrame/CFG_risk_score.drawio)
+![Metoda grafului de control a fluxului metoda genereaza_recomandare](diagrame/CFG_genereaza_recomandare.drawio)
 
 
 ## 5. Bibliografie

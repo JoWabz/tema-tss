@@ -152,9 +152,13 @@ Efecte: E1 - prioritate 1; E2 - prioritate 2; E3 - prioritate 3; E4 - prioritate
 ![Metoda grafului cauza-efect](diagrame/Graful_cauza_efect.drawio.png)
 
 ## 3. Testarea structurala - Metoda grafului de control al fluxului (CFG)
+Mai jos am realizat diagramele CFG separat pentru cele 2 metode ale clasei.
 
-![Metoda grafului de control a fluxului metoda calculeaza_risk_score](diagrame/CFG_risk_score.drawio)
-![Metoda grafului de control a fluxului metoda genereaza_recomandare](diagrame/CFG_genereaza_recomandare.drawio)
+Metoda calculeaza_risk_score
+![Metoda grafului de control a fluxului metoda calculeaza_risk_score](diagrame/CFG_risk_score.drawio.png)
+
+Metoda genereaza_recomandare
+![Metoda grafului de control a fluxului metoda genereaza_recomandare](diagrame/CFG_genereaza_recomandare.drawio.png)
 
 
 ## 5. Bibliografie

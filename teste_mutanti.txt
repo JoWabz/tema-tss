@@ -1,0 +1,61 @@
+Mutatest diagnostic summary
+===========================
+ - Source location: E:\LEARNING\cursuri facultate\An3-Sem2\testare sisteme software\proiect\scor_risc.py
+ - Test commands: ['pytest', 'test_scor_risc.py']
+ - Mode: s
+ - Excluded files: []
+ - N locations input: 10
+ - Random seed: None
+
+Random sample details
+---------------------
+ - Total locations mutated: 10
+ - Total locations identified: 34
+ - Location sample coverage: 29.41 %
+
+
+Running time details
+--------------------
+ - Clean trial 1 run time: 0:00:00.822665
+ - Clean trial 2 run time: 0:00:00.816281
+ - Mutation trials total run time: 0:00:20.568485
+
+Overall mutation trial summary
+==============================
+ - DETECTED: 15
+ - SURVIVED: 6
+ - TOTAL RUNS: 21
+ - RUN DATETIME: 2026-05-13 01:14:34.222827
+
+
+Mutations by result status
+==========================
+
+
+SURVIVED
+--------
+ - scor_risc.py: (l: 44, c: 28) - mutation from None to False
+ - scor_risc.py: (l: 93, c: 32) - mutation from <class 'ast.Eq'> to <class 'ast.LtE'>
+ - scor_risc.py: (l: 98, c: 30) - mutation from <class 'ast.Or'> to <class 'ast.And'>
+ - scor_risc.py: (l: 103, c: 13) - mutation from <class 'ast.GtE'> to <class 'ast.Gt'>
+ - scor_risc.py: (l: 112, c: 34) - mutation from <class 'ast.Eq'> to <class 'ast.GtE'>
+ - scor_risc.py: (l: 127, c: 30) - mutation from <class 'ast.Or'> to <class 'ast.And'>
+
+
+DETECTED
+--------
+ - scor_risc.py: (l: 44, c: 28) - mutation from None to True
+ - scor_risc.py: (l: 65, c: 16) - mutation from If_Statement to If_False
+ - scor_risc.py: (l: 65, c: 16) - mutation from If_Statement to If_True
+ - scor_risc.py: (l: 66, c: 20) - mutation from AugAssign_Add to AugAssign_Mult
+ - scor_risc.py: (l: 66, c: 20) - mutation from AugAssign_Add to AugAssign_Sub
+ - scor_risc.py: (l: 66, c: 20) - mutation from AugAssign_Add to AugAssign_Div
+ - scor_risc.py: (l: 69, c: 8) - mutation from AugAssign_Add to AugAssign_Sub
+ - scor_risc.py: (l: 69, c: 8) - mutation from AugAssign_Add to AugAssign_Mult
+ - scor_risc.py: (l: 69, c: 8) - mutation from AugAssign_Add to AugAssign_Div
+ - scor_risc.py: (l: 93, c: 32) - mutation from <class 'ast.Eq'> to <class 'ast.NotEq'>
+ - scor_risc.py: (l: 103, c: 13) - mutation from <class 'ast.Or'> to <class 'ast.And'>
+ - scor_risc.py: (l: 103, c: 13) - mutation from <class 'ast.GtE'> to <class 'ast.LtE'>
+ - scor_risc.py: (l: 103, c: 13) - mutation from <class 'ast.GtE'> to <class 'ast.Eq'>
+ - scor_risc.py: (l: 112, c: 34) - mutation from <class 'ast.Eq'> to <class 'ast.NotEq'>
+ - scor_risc.py: (l: 112, c: 34) - mutation from <class 'ast.Eq'> to <class 'ast.Lt'>

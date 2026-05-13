@@ -1,4 +1,7 @@
 # Proiect Testarea Sistemelor Software
+Nume student: Cordunianu Ioana
+Proiect: T1 Testare unitara in Python
+
 Aplicatie web pentru managementul amenintarilor de securitate cibernetica - Modul de calcul 'RiskScorer'
 
 Proiectul abordeaza o testare unitara completa in limbajul Python , utilizand framework-ul 'pytest' si modulul pentru testarea de mutanti 'mutatest'.

@@ -303,7 +303,14 @@ class TestAcoperireConditieRecomandare:
         assert rec['prioritate'] == 4
 
 class TestCircuiteIndependente:
-     pass
+      def test_D1_cvss_negativ_fara_istoric(self):
+        scor = RiskScorer.calculeaza_risk_score(-5.0, 'internal', 'medie', 'low', None)
+        assert scor == 0.0
+
+      def test_D2_cvss_valid_fara_istoric(self):
+        scor = RiskScorer.calculeaza_risk_score(5.0, 'internal', 'medie', 'low', None)
+        # raw = 5.0 * 1.0 * 1.1 * 1.0 = 5.5
+        assert scor == round(min((5.5 / 31.5) * 10, 10.0), 2)
 
 class MutantiRamasi:
      def test_ucide_mutant_breach(self):

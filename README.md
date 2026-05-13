@@ -182,10 +182,11 @@ Drum3: 1,2,4,6,7
 Drum4: 1,2,4,6,8,9
 
 ### 3.3 Decision coverage (acoperirea la nivel de decizie)
+
 Fiecare decizie trebuie sa ia atat valoarea True cat si False
-Ex: 
 
 ### 3.4 Condition coverage (acoperirea la nivel de conditie)
+
 Pentru acoperirea la nivel de conditie, la metoda calculeaza_risk_score se pot folosi aceleasi teste ca si la statement coverage. 
 Pentru U2 - genereaza_recomandare(): 
 N2: risk_score >= 9.0 OR sev == 'critical'
@@ -197,6 +198,24 @@ Testul care acopera N5 cand score nu e >=4 si sev nu e = 'medium' acopera N7.
 
 Numarul total de teste efectuate este 64.
 ![Screenshot teste trecute](diagrame/screenshot_passed_tests1.png)
+
+### 3.5 Circuite independente
+
+calculeaza_risk_score():
+D1: 1-2-3-4-5-11 - cvss=-3.0, istoric = None
+D2: 1-3-4-5-11 - cvss = 4, istoric = none
+D3: 1-3-4-5-6-7-8-6-11 - cvss = 5, istoric = 'malware'
+D4: 1-3-4-5-6-7-9-10-6-11 cvss=5, istoric= breach
+D5: 1-3-4-5-6-7-9-6-11 cvss = 5, istoric ='altceva'
+
+genereaza_recomandare()
+D1: 1-2-3 - risk = 9.2, sev = 'low' 
+D2: 1-2-3-4 - risk = 7.2, sev = 'low' 
+D3: 1-2-3-5-6 - risk = 5.1, sev = 'low' 
+D4: 1-2-3-5-7-8 - risk = 1.2, sev = 'low' 
+### 3.6 Mutanti
+
+Pentru testarea munatntilor am folosit modulul 'mutatest' pe fisierul scor_risc.py. Acesta a identificat 34 de locatii mutabile, din care a selectat random 10 locatii asupra carora a aplicat 21 de mutatii. Dintre acestia, 15 au fost omorati si 6 au supravietuit. Pentru 2 dintre supravietuitori am facut teste suplimentare.
 
 ## 5. Bibliografie
 [1] https://docs.pytest.org/en/stable/index.html, Data accesarii: 6 mai 2026

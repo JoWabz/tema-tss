@@ -80,34 +80,34 @@ class RiskScorer():
         severitate: str,
         remediation: str = None
     ) -> dict:
-        # Genereaza recomandarea de remediere si urgenta actiunii.
+        # Genereaza detalii despre urgenta actiunii si recomandarea de remediere.
         
         # Returneaza un dict cu:
         # - urgenta    : string — cat de urgent trebuie remediat
         # - termen     : string — termenul recomandat
         # - actiune    : string — ce trebuie facut
-        # - prioritate : int — 1 (urgent) la 4 (poate astepta)
+        # - prioritate : int — 1 (urgent) la 4 (nu e urgent)
 
         sev = (severitate or 'low').lower()
 
         if risk_score >= 9.0 or sev == 'critical':
             return {
-                "urgenta":    "CRITIC — Actiune imediata necesara",
+                "urgenta":    "CRITIC — Actiune imediata necesara - consultati ultimele recomandari",
                 "termen":     "< 24 ore",
                 "prioritate": 1,
                 "actiune":    remediation or
-                            "Patch imediat sau izolati sistemul de reteaua locala. "
+                            "Efectuati un patch imediat sau izolati sistemul de reteaua locala. "
                             "Contactati echipa de securitate.",
-                "culoare":    "#ef4444",  # rosu
+                "culoare":    "#e41b1b",  # rosu
             }
         elif risk_score >= 7.0 or sev == 'high':
             return {
-                "urgenta":    "RIDICAT — Remediere urgenta",
+                "urgenta":    "RIDICAT — Remediati urgent",
                 "termen":     "< 7 zile",
                 "prioritate": 2,
                 "actiune":    remediation or
                             "Aplicati patch-ul disponibil sau implementati masuri temporare de protectie ",
-                "culoare":    "#f59e0b",  # portocaliu
+                "culoare":    "#e2b870",  # portocaliu
             }
         elif risk_score >= 4.0 or sev == 'medium':
             return {
@@ -115,9 +115,9 @@ class RiskScorer():
                 "termen":     "< 30 zile",
                 "prioritate": 3,
                 "actiune":    remediation or
-                            "Includeti in planul de patching lunar. "
+                            "Includeti in planul de patch lunar. "
                             "Monitorizati pentru semne de exploatare.",
-                "culoare":    "#3b82f6",  # albastru
+                "culoare":    "#0b34e9",  # albastru
             }
         else:
             return {
@@ -125,8 +125,8 @@ class RiskScorer():
                 "termen":     "< 90 zile",
                 "prioritate": 4,
                 "actiune":    remediation or
-                            "Includeti in ciclul normal de patch management.",
-                "culoare":    "#22c55e",  # verde
+                            "Includeti in planul normal de patch management.",
+                "culoare":    "#51e086",  # verde
             }
 
 

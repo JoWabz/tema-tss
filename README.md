@@ -66,7 +66,6 @@ Pentru detalii a se vedea part1 din tabele_proiect.pdf
 La analiza valorilor de  frontiera, am testat cvss_score si risk_score, deoarece au valori numerice. La cvss_score, avand valori intre 0.00 si 10.00, avem valorile: -0.01, 0,00, 0.01, 10.0, 10.01
 La risk_score, avand valorile: >= 9.00, >= 7.00, >= 4.00, <4.00, astfel alegem:9.00, 8.99, 6.99, 7.00, 3.99, 4.00
 
-![Analiza valorilor de frontiera](tabel_analiza_valorilor_de_frontiera.png)
 
 
 ### 1.3 Partitionarea in categorii (Category-Partitioning)
